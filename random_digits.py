@@ -3,6 +3,8 @@ import random
 
 def main():
     st.title("Press for a randomised list of last X digits in the user id")
+    st.write("If there are any problems, you reach out to the analytics team and give them this URL which runs the code: https://github.com/eric-hb-carwow/crm_random_digits_regex")
+
     col1,_ = st.columns([1,2])
     
     with col1:
