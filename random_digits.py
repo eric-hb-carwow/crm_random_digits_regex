@@ -24,19 +24,22 @@ def main():
         start = 0
         mid_point = len(all_combinations) // num_groups
         groups = []
-        for i in range(num_groups-1):
-            group = all_combinations[start:mid_point]
-            groups[i] = group
-            start += mid_point
-            mid_point += mid_point
+        for i in range(num_groups):
+            if i < num_groups - 1:
+                group = all_combinations[start:start + mid_point]
+                start += mid_point
+            else:
+                group = all_combinations[start:]  # The last group gets the remaining combinations
+            groups.append(group)
             
             if i == 0:
                 st.write(f'Group 1, note the copy button on the right side!')
             else:
-                st.write(f"Group %s" % (i+1))
+                st.write(f"Group {i + 1}")
 
         # Display the results
-        st.code(f".*{'|.*'.join(groups[i])}")
+        for i, group in enumerate(groups):
+            st.code(f".*{'|.*'.join(group)}")
         
 
 if __name__ == "__main__":
