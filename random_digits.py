@@ -23,8 +23,10 @@ def main():
         # Divide the list into control and test groups
         start = 0
         mid_point = len(all_combinations) // num_groups
+        groups = []
         for i in range(num_groups-1):
             group = all_combinations[start:mid_point]
+            groups[i] = group
             start += mid_point
             mid_point += mid_point
             
@@ -34,7 +36,7 @@ def main():
                 st.write(f"Group %s" % (i+1))
 
         # Display the results
-        st.code(f".*{'|.*'.join(group)}")
+        st.code(f".*{'|.*'.join(groups[i)}")
         
 
 if __name__ == "__main__":
