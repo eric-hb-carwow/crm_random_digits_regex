@@ -36,7 +36,7 @@ def main():
                 st.write(f"Group %s" % (i+1))
 
         # Display the results
-        st.code(f".*{'|.*'.join(groups[i)}")
+        st.code(f".*{'|.*'.join(groups[i])}")
         
 
 if __name__ == "__main__":
