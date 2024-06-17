@@ -28,7 +28,7 @@ def main():
             start += mid_point
             mid_point += mid_point
             
-            if i = 0:
+            if i == 0:
                 st.write(f'Group 1, note the copy button on the right side!')
             else 
                 st.write(f"Group %s" % (i+1))
