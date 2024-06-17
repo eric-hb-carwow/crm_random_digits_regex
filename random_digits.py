@@ -37,8 +37,7 @@ def main():
             else:
                 st.write(f"Group {i + 1}")
 
-        # Display the results
-        for i, group in enumerate(groups):
+            # Display the results for the current group
             st.code(f".*{'|.*'.join(group)}")
         
 
