@@ -30,7 +30,7 @@ def main():
             
             if i == 0:
                 st.write(f'Group 1, note the copy button on the right side!')
-            else 
+            else:
                 st.write(f"Group %s" % (i+1))
 
         # Display the results
